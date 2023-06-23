@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-dos... © Anjali</title>
+    <link rel="shortcut icon" href="/tile-2.webp" type="image/x-icon">
+    <link rel="stylesheet" href="/style.css">
+    <script src="/app.js"></script>
+</head>
+<body onload="loading()">
+    
+    <div id="load"></div>
+
+    <!-- whole content container -->
+    <div class="container">
+        <h1 class="container-title">Hey, How you doin'...</h1>
+        <p class="container-desc">Let's create a to do!</p>
+        
+        <!-- default content -->
+        <section class="base">
+            <input type="text" placeholder="Revision of DSA..." class="text-inputs" id="user_task">
+            <button class="add-task-btn" id="newTask" onclick="addTask()">Add Task</button>
+            <!-- pop up message box -->
+            <div class="d-none" id="pop"></div>
+        </section>
+
+        <h2 class="head">Tasks to do...</h2>
+        <!-- main tasks container to display the tasks -->
+        <div class="storage" id="storeHouse">
+
+            <!-- dummy card -->
+            <div class="card" id="dummy">
+                <input type="checkbox" name=""class="cb" checked>
+                <input type="text" class="task-desc" id="desc" value="Dummy Task" readonly>
+                <button class="btn d-none">Edit</button>
+                <button class="btn d-none">Delete</button>
+            </div>
+            <!-- cards -->
+
+        </div>
+        <button class="btn" onclick="deleteAll()" id="deleteAllBtn">Delete all tasks</button>
+    </div>
+</body>
+</html>

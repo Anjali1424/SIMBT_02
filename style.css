@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Poppins:ital,wght@0,400;0,700;1,900&family=Roboto:wght@400;700&display=swap');
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+/* outer box  */
+.container{
+    width: 600px;
+    /* height: 60vh; */
+    background-color: rgb(227, 241, 255);
+    border-radius: 10px;
+    margin: 4% auto;
+    padding: 20px;
+    /* overflow: hidden; */
+    box-sizing: border-box;
+    box-shadow: 20px 20px 25px rgba(187, 221, 255, 0.79);
+    transition: all 0.15s;
+}
+.container:hover{
+    box-shadow: 20px 20px 25px rgba(89, 172, 255, 0.516);
+    transition: all 0.15s;
+}
+.pop-bar-1{
+    background-color: rgb(214, 255, 214);
+    width: 30%;
+    color: green;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-left: 30%;
+    text-align: center;
+}
+.pop-bar-2{
+    background-color: rgb(255, 218, 218);
+    width: 30%;
+    color: red;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-left: 30%;
+    text-align: center;
+}
+.pop-bar-3{
+    background-color: rgb(255, 220, 255);
+    width: 40%;
+    color: purple;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-left: 30%;
+    text-align: center;  
+}
+.container-title{
+    margin: 0;
+}
+.container-desc{
+    color: rgb(74, 74, 74);
+    margin: 5px 0;
+}
+
+/* base styling */
+.base{
+    margin: 15px;
+    /* background-color: aqua; */
+}
+.add-task-btn{
+    background-color: rgb(0, 128, 255);
+    color: whitesmoke;
+    padding: 9px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    margin-left: 30px;
+    cursor: pointer;
+}
+.add-task-btn:hover{
+    background-color: rgb(48, 152, 255);
+}
+.add-task-btn:active{
+    background-color: dodgerblue;
+}
+.text-inputs{
+    padding: 8px 10px;
+    font-size: 16px;
+    margin: 10px 0;
+    width: 70%;
+    outline: none;
+    border: 1px solid rgb(206, 206, 206);
+    border-radius: 5px;
+}
+.text-inputs:hover{
+    border: 1px solid rgb(146, 200, 255);
+}
+.text-inputs:focus{
+    border: 1px solid dodgerblue;
+}
+
+/* storage styling */
+.head{
+    margin: 10px;
+}
+.cb{
+    cursor: pointer;
+}
+.card{
+    display: flex;
+    padding: 5px;
+    /* border-bottom: 1px solid black; */
+    height: 5vh;
+    align-items: center;
+    margin-bottom: 5px;
+    /* opacity: 0.9; */
+    cursor: context-menu;
+}
+
+.task-desc{
+    margin-left: 10px;
+    width: 100%;
+    outline: none;
+    padding: 8px 10px;
+    font-size: 15px;
+    border: 1px solid rgb(206, 206, 206);
+    border-radius: 5px;
+    cursor: context-menu;
+    opacity: 0.8;
+}
+.btn{
+    background-color: rgb(0, 128, 255);
+    color: whitesmoke;
+    padding: 8px 18px;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: rgb(48, 152, 255);
+}
+.btn:active{
+    background-color: dodgerblue;
+}
+
+/* display none where so ever it's gonna be used */
+.d-none{
+    display: none;
+}
+
+/* extra property for item that is being edited */
+.edit{
+    cursor: grabbing;
+    opacity: 1;
+    border: 1px solid dodgerblue;
+}
+
+.cb:checked + .task-desc{
+    text-decoration: line-through;
+    text-decoration-color: dodgerblue;
+    opacity: 0.7;
+}
+
+/* style for loader gif */
+#load{
+    background: #ffffff url(/XOsX.gif) no-repeat center;
+    height: 100vh;
+    width: 100%;
+    background-size: 20%;
+    position: fixed;
+    z-index: 20;
+}
+
+@media(max-width:415px){
+    .container{
+        width: auto;
+    }
+    body{
+        text-align: center;
+    }
+    .add-task-btn{
+        margin: 0;
+    }
+    .pop-bar-1,.pop-bar-2,.pop-bar-3{
+        font-size: 12px;
+        width: auto;
+        margin: 10px auto;
+    }
+    .btn{
+        font-size: 15px;
+        padding: 8px 16px;
+    }
+}
